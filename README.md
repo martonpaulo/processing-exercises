@@ -1,2 +1,2 @@
-# processing-exercises
- Projeto da disciplina de Processamento Gráfico, CIn-UFPE 
+# Exercícios de Processing
+Projeto da disciplina de Processamento Gráfico, CIn-UFPE 
