@@ -52,12 +52,12 @@ void draw() {
   // RED POINT
   stroke(red);
   strokeWeight(5);
-  point(int(pointX) + width/2.0, int(pointY) + height/2.0);
+  point(pointX + width/2.0, pointY + height/2.0);
   strokeWeight(1);
   
   // INNER CIRCLE
   noFill();
   stroke(blue);
   strokeWeight(1.2);
-  ellipse(int(circleX) + width/2.0, int(circleY) + height/2.0, 2*r, 2*r);
+  ellipse(circleX + width/2.0, circleY + height/2.0, 2*r, 2*r);
 }
