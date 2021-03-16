@@ -28,7 +28,7 @@ void setup() {
   secondPointY = centerY + arm + forearm;
   
   frameRate(60);
-  speed = 0.25 / 5;
+  speed = 0.25;
 }
 
 
