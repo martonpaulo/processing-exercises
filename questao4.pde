@@ -1,9 +1,9 @@
 // UNIT OF LENGTH
-int UC = 1;
+float UC = 1.3;
 
 // RADIUSES
-int r = 25 * UC;
-int R = 100 * UC;
+float r = 25 * UC;
+float R = 100 * UC;
 
 // COLORS
 color red = color(236, 0, 1);
@@ -15,7 +15,7 @@ float circleAngle, circleX, circleY, pointAngle, pointX, pointY, speed;
 
 
 void setup() {
-  size(400, 300);
+  size(520, 380);
   
   circleAngle = 0.0;
   circleX = R-r;
@@ -36,6 +36,7 @@ void draw() {
   // MAJOR CIRCLE
   noFill();
   stroke(blue);
+  strokeWeight(1.5);
   ellipse(width/2, height/2, 2*R, 2*R);
   
   // CIRCLE COORDINATES
@@ -44,18 +45,19 @@ void draw() {
   circleY = sin(radians(circleAngle)) * (R - r);
   
   // POINT COORDINATES
-  pointAngle = (-3 * circleAngle) % 360;
+  pointAngle = (-4 * circleAngle) % 360;
   pointX = circleX + cos(radians(pointAngle)) * r;
   pointY = circleY + sin(radians(pointAngle)) * r;
   
   // RED POINT
   stroke(red);
-  strokeWeight(3);
+  strokeWeight(5);
   point(int(pointX) + width/2.0, int(pointY) + height/2.0);
   strokeWeight(1);
   
   // INNER CIRCLE
   noFill();
   stroke(blue);
+  strokeWeight(1.2);
   ellipse(int(circleX) + width/2.0, int(circleY) + height/2.0, 2*r, 2*r);
 }
