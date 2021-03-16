@@ -28,7 +28,7 @@ void setup() {
   secondPointY = centerY + arm + forearm;
   
   frameRate(60);
-  speed = 0.375;
+  speed = 0.25 / 5;
 }
 
 
@@ -38,18 +38,18 @@ void draw() {
   // FIRST POINT
   stroke(white);
   strokeWeight(9);
-  firstPointAngle = (firstPointAngle - speed) % 45 - 270;
+  firstPointAngle = (firstPointAngle - speed) % 30 - 270;
   firstPointX = cos(radians(firstPointAngle)) * arm;
   firstPointY = sin(radians(firstPointAngle)) * arm;
   
   // SECOND POINT
   stroke(white);
   strokeWeight(9);
-  secondPointAngle = (secondPointAngle - speed*2) % 90 - 270;
+  secondPointAngle = (secondPointAngle - speed*3) % 90 - 270;
   secondPointX = cos(radians(secondPointAngle)) * forearm;
   secondPointY = sin(radians(secondPointAngle)) * forearm;
   
-  // ONLY CHANGE Xs AND Ys IF THE SECOND LINE IS NOT IN HORIZONTAL
+  // Xs AND Ys
   X1 = centerX + firstPointX;
   X2 = X1 + secondPointX;
   Y1 = centerY + firstPointY;
@@ -60,7 +60,6 @@ void draw() {
   strokeWeight(4);
   line(centerX, centerY, X1, Y1);  
   line(X1, Y1, X2, Y2);
-  
   
   // DRAW POINTS
   stroke(white);
